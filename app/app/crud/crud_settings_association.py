@@ -1,0 +1,6 @@
+from .base import CRUDBase
+
+from app.models.settings_association import SettingsAssociation as SettingsAssociationModel
+from app.schemas.settings_association import SettingsAssociation_Create, SettingsAssociation_Update, SettingsAssociation
+
+settings_association = CRUDBase[SettingsAssociationModel, SettingsAssociation, SettingsAssociation_Create, SettingsAssociation_Update](SettingsAssociation)
